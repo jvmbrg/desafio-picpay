@@ -11,17 +11,19 @@ import lombok.Setter;
 
 import java.util.Objects;
 
-@Entity
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
+@Entity
 public class Wallet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private double balance = 0;
+
+    private double balance;
 
     @Override
     public boolean equals(Object o) {

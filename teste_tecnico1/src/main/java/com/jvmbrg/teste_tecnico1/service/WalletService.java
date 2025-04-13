@@ -10,4 +10,6 @@ public class WalletService {
     public WalletService(WalletRepository walletRepository) {
         this.walletRepository = walletRepository;
     }
+
+
 }

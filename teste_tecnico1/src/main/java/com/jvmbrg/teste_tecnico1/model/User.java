@@ -31,6 +31,10 @@ public class User {
     @Column(nullable = false, unique = true)
     private String cpf;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "wallet_id")
+    private Wallet wallet;
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
